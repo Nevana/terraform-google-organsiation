@@ -5,7 +5,7 @@ module "stage-folder" {
   folder_name   = var.folder_name
 }
 
-module "host-project" {
+module "host_project" {
   source = "./modules/host-project/"
 
   project_id               = var.host_project_name
@@ -15,7 +15,7 @@ module "host-project" {
   project_service_identity = var.project_service_identity
 }
 
-module "service-project" {
+module "service_project" {
   source = "./modules/service-project/"
 
   for_each = try(var.service_project_names, {})
